@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
 :root {
   --fundo: #e9e9e9;
   --texto: #303030;
@@ -18,18 +23,18 @@ body {
   color: var(--texto);
 }
 
-
 .layout {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  width: 100%;
 }
-
 
 .menu {
   display: none;
   background: var(--destaque);
   padding: 20px;
+  min-height: 100vh;
 }
 
 .menu ul {
@@ -38,13 +43,13 @@ body {
 
 .menu li {
   margin-bottom: 10px;
+  cursor: pointer;
 }
-
 
 main {
+  flex: 1;
   padding: 20px;
 }
-
 
 header {
   display: flex;
@@ -55,9 +60,9 @@ header {
 
 header img {
   width: 40px;
+  height: 40px;
   border-radius: 50%;
 }
-
 
 .grid {
   display: grid;
@@ -79,7 +84,6 @@ header img {
   margin-bottom: 10px;
 }
 
-
 @media (width >= 768px) {
   .layout {
     flex-direction: row;
@@ -93,4 +97,69 @@ header img {
   .grid {
     grid-template-columns: repeat(2, 1fr);
   }
+}
+
+/* ================= LOGIN ================= */
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-box {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  width: 100%;
+  max-width: 350px;
+}
+
+.login-box h1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.login-box p {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px;
+  border: none;
+  background: #303030;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #000;
+}
+
+#mensagem-erro {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+  min-height: 18px;
 }
