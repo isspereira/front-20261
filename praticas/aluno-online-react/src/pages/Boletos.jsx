@@ -2,7 +2,7 @@ import "./Boletos.css";
 import Tabela from "../components/Tabela";
 
 function Boletos() {
-  const colunas = ["Vencimento", "Valor"];
+  const colunas = ["Vencimento", "Valor", "Status"];
 
   const dados = [
     {

@@ -44,7 +44,7 @@ function Sidebar() {
         </button>
       </nav>
     </aside>
-  );
+  )
 }
 
-export default Sidebar;
+export default Sidebar

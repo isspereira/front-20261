@@ -2,7 +2,7 @@ import "./Requerimentos.css";
 import Tabela from "../components/Tabela";
 
 function Requerimentos() {
-  const colunas = ["Tipo", "Status"];
+  const colunas = ["Tipo", "Data", "Status"];
 
   const dados = [
     {

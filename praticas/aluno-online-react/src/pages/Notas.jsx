@@ -2,7 +2,7 @@ import "./Notas.css";
 import Tabela from "../components/Tabela";
 
 function Notas() {
-  const colunas = ["Disciplina", "Nota"];
+  const colunas = ["Disciplina", "Nota", "Status"];
 
   const dados = [
     {
