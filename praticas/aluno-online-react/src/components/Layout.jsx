@@ -1,18 +1,19 @@
+import { Outlet } from "react-router-dom";
+
 import "./Layout.css";
 import Sidebar from "./Sidebar";
 import Header from "./Header";
 
-function Layout({ titulo, subtitulo, children }) {
+function Layout() {
   return (
     <div className="layout">
       <Sidebar />
 
       <main className="layout-main">
-        <Header titulo={titulo} />
-        <h2 className="layout-subtitulo">{subtitulo}</h2>
+        <Header />
 
         <section className="layout-content">
-          {children}
+          <Outlet />
         </section>
       </main>
     </div>

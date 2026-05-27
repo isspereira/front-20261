@@ -1,12 +1,48 @@
+import { NavLink, useNavigate } from "react-router-dom";
+
+import { useAuth } from "../contexts/AuthContext";
+
 import "./Sidebar.css";
-import Menu from "./Menu";
 
 function Sidebar() {
+  const navigate = useNavigate();
+
+  const { logout } = useAuth();
+
+  function handleLogout() {
+    logout();
+    navigate("/login");
+  }
+
   return (
     <aside className="sidebar">
-      <h1 className="sidebar-title">Aluno Online</h1>
+      <h2>Aluno Online</h2>
 
-      <Menu /> 
+      <nav>
+        <NavLink to="/" end>
+          Dashboard
+        </NavLink>
+
+        <NavLink to="/faltas">
+          Faltas
+        </NavLink>
+
+        <NavLink to="/notas">
+          Notas
+        </NavLink>
+
+        <NavLink to="/boletos">
+          Boletos
+        </NavLink>
+
+        <NavLink to="/requerimentos">
+          Requerimentos
+        </NavLink>
+
+        <button className="logout-btn" onClick={handleLogout}>
+          Sair
+        </button>
+      </nav>
     </aside>
   );
 }

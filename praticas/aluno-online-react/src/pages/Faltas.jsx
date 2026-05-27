@@ -1,5 +1,4 @@
 import "./Faltas.css";
-import Layout from "../components/Layout";
 import Tabela from "../components/Tabela";
 
 function Faltas() {
@@ -11,13 +10,12 @@ function Faltas() {
   ];
 
   return (
-    <Layout titulo="Faltas" subtitulo="Histórico">
-      <div className="faltas-container">
-        <div className="faltas-card">
-          <Tabela titulos={colunas} dados={dados} />
-        </div>
-      </div>
-    </Layout>
+    <div>
+      <h1>Faltas</h1>
+      <p>Histórico de faltas</p>
+
+      <Tabela titulos={colunas} dados={dados} />
+    </div>
   );
 }
 

@@ -1,16 +1,22 @@
-table {
-  width: 100%;
-  margin-top: 20px;
-  border-collapse: collapse;
-  background-color: white;
+.requerimentos-page {
+  padding-top: 10px;
 }
 
-th {
-  background-color: var(--cor-texto);
+.requerimentos-page h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
   color: white;
 }
 
-th, td {
-  border: 1px solid #ccc;
-  padding: 10px;
+.requerimentos-page h2 {
+  font-size: 24px;
+  margin-bottom: 30px;
+  color: #cbd5e1;
+}
+
+.requerimentos-card {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 25px;
+  border-radius: 16px;
+  max-width: 900px;
 }
