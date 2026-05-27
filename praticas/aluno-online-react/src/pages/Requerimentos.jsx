@@ -6,32 +6,26 @@ function Requerimentos() {
 
   const dados = [
     {
-      Tipo: "Declaração Acadêmica",
-      Data: "01/06/2026",
+      Tipo: "Declaração de Matrícula",
       Status: "Em análise",
     },
     {
       Tipo: "Histórico Escolar",
-      Data: "20/05/2026",
-      Status: "Concluído",
+      Status: "Aprovado",
+    },
+    {
+      Tipo: "Segunda Via de Boleto",
+      Status: "Pendente",
     },
   ];
 
   return (
     <div className="requerimentos-page">
-      <div className="page-header">
-        <h1>Requerimentos</h1>
-        <p>Solicitações acadêmicas</p>
-      </div>
+      <h1>Requerimentos</h1>
 
-      <div className="info-cards">
-        <div className="info-card">
-          <h3>Total</h3>
-          <span>2</span>
-        </div>
-      </div>
+      <h2>Solicitações</h2>
 
-      <div className="table-container">
+      <div className="requerimentos-card">
         <Tabela titulos={colunas} dados={dados} />
       </div>
     </div>

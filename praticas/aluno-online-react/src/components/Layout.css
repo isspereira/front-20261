@@ -7,10 +7,15 @@
 .layout {
   display: flex;
   min-height: 100vh;
-  background-color: #f4f4f4;
+  background: linear-gradient(135deg, #0f1c4d, #243b8f);
+  color: white;
 }
 
 .content {
   flex: 1;
-  padding: 30px;
+  padding: 40px;
+}
+
+.layout-content {
+  margin-top: 30px;
 }

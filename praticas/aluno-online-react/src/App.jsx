@@ -1,22 +1,40 @@
-import Dashboard from './pages/Dashboard';
-import Notas from './pages/Notas';
-import Faltas from './pages/Faltas';
-import Boletos from './pages/Boletos';
-import Requerimentos from './pages/Requerimentos';
-import Login from './pages/Login';
+import { Routes, Route, Navigate } from "react-router-dom";
+
+import { useAuth } from "./contexts/AuthContext";
+
+import Layout from "./components/Layout";
+
+import Login from "./pages/Login";
+import Dashboard from "./pages/Dashboard";
+import Faltas from "./pages/Faltas";
+import Notas from "./pages/Notas";
+import Boletos from "./pages/Boletos";
+import Requerimentos from "./pages/Requerimentos";
 
 function App() {
-  const pagina = 6;
+  const { autenticado } = useAuth();
+
+  if (!autenticado) {
+    return (
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route path="*" element={<Navigate to="/login" />} />
+      </Routes>
+    );
+  }
 
   return (
-    <>
-      {pagina === 1 && <Dashboard />}
-      {pagina === 2 && <Notas />}
-      {pagina === 3 && <Faltas />}
-      {pagina === 4 && <Boletos />}
-      {pagina === 5 && <Requerimentos />}
-      {pagina === 6 && <Login />}
-    </>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Dashboard />} />
+        <Route path="faltas" element={<Faltas />} />
+        <Route path="notas" element={<Notas />} />
+        <Route path="boletos" element={<Boletos />} />
+        <Route path="requerimentos" element={<Requerimentos />} />
+      </Route>
+
+      <Route path="*" element={<Navigate to="/" />} />
+    </Routes>
   );
 }
 

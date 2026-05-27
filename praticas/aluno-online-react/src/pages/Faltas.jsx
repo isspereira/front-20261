@@ -12,14 +12,11 @@ function Faltas() {
   ];
 
   return (
-    <div className="faltas-page">
-      <div className="page-header">
-        <h1>Faltas</h1>
-      </div>
+    <div>
+      <h1>Faltas</h1>
+      <p>Histórico de faltas</p>
 
-      <div className="table-container">
-        <Tabela titulos={colunas} dados={dados} />
-      </div>
+      <Tabela titulos={colunas} dados={dados} />
     </div>
   );
 }

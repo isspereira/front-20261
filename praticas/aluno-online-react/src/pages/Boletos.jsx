@@ -5,26 +5,27 @@ function Boletos() {
   const colunas = ["Vencimento", "Valor", "Status"];
 
   const dados = [
-    { vencimento: "10/06/2026", valor: "R$ 500", status: "Pago" },
-    { vencimento: "10/07/2026", valor: "R$ 500", status: "Pendente" },
-    { vencimento: "10/08/2026", valor: "R$ 500", status: "Pendente" },
+    {
+      Vencimento: "01/04/2026",
+      Valor: "R$ 500,00",
+    },
+    {
+      Vencimento: "01/05/2026",
+      Valor: "R$ 500,00",
+    },
+    {
+      Vencimento: "01/06/2026",
+      Valor: "R$ 500,00",
+    },
   ];
 
   return (
     <div className="boletos-page">
-      <div className="page-header">
-        <h1>Boletos</h1>
-        <p>Controle financeiro acadêmico</p>
-      </div>
+      <h1>Boletos</h1>
 
-      <div className="info-cards">
-        <div className="info-card">
-          <h3>Mensalidade</h3>
-          <span>R$ 500</span>
-        </div>
-      </div>
+      <h2>Pagamentos</h2>
 
-      <div className="table-container">
+      <div className="boletos-card">
         <Tabela titulos={colunas} dados={dados} />
       </div>
     </div>
