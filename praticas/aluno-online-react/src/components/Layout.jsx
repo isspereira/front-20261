@@ -5,7 +5,6 @@ import Sidebar from "./Sidebar";
 import Header from "./Header";
 
 function Layout() {
-function Layout() {
   return (
     <div className="layout">
       <Sidebar />
@@ -18,7 +17,7 @@ function Layout() {
         </section>
       </main>
     </div>
-  )
+  );
 }
 
-export default Layout
+export default Layout;
