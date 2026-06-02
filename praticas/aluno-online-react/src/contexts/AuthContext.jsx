@@ -1,4 +1,6 @@
-import { createContext, useState } from "react";
+/* eslint-disable react-refresh/only-export-components */
+
+import { createContext, useContext, useState } from "react";
 
 const AuthContext = createContext();
 
@@ -30,4 +32,8 @@ function AuthProvider({ children }) {
   );
 }
 
-export { AuthContext, AuthProvider };
+function useAuth() {
+  return useContext(AuthContext);
+}
+
+export { AuthContext, AuthProvider, useAuth };
