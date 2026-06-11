@@ -1,22 +1,23 @@
 .requerimentos-page {
-  padding-top: 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px;
 }
 
-.requerimentos-page h1 {
-  font-size: 42px;
-  margin-bottom: 10px;
-  color: white;
+.page-header {
+  margin-bottom: 24px;
 }
 
-.requerimentos-page h2 {
-  font-size: 24px;
-  margin-bottom: 30px;
-  color: #cbd5e1;
+.info-cards {
+  margin-bottom: 24px;
 }
 
-.requerimentos-card {
-  background: rgba(255, 255, 255, 0.08);
-  padding: 25px;
-  border-radius: 16px;
-  max-width: 900px;
+.table-container {
+  margin-bottom: 24px;
+}
+
+.novo-requerimento-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
 }
